@@ -1,5 +1,4 @@
 package cat.main.academy.ua;
-import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 
-public abstract class TestBaseAdmin {
+public abstract class BaseAdminPage {
     public WebDriver driver;
     public WebDriverWait wait;
 
@@ -193,11 +192,6 @@ public abstract class TestBaseAdmin {
         Assert.assertTrue(!driver.findElements(By.cssSelector("a[href*=vqmods]")).isEmpty());
     }
 
-    @After
-    public void quitDriver() {
-        driver.quit();
-
-    }
 }
 
 

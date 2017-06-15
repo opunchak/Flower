@@ -1,0 +1,19 @@
+/*package cat.main.academy.ua;
+
+import org.junit.Before;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+/**
+ * Created by 450G1 on 30.05.2017.
+ */
+/*public class AdminPage_PageObject extends LoginPage_PageObject {
+    public AdminPage_PageObject(WebDriver driver){
+        PageFactory.initElements(driver, this);
+        this.driver = driver;
+    }
+
+
+}

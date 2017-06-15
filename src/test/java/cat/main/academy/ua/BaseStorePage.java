@@ -1,6 +1,5 @@
 package cat.main.academy.ua;
 
-import org.junit.After;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,10 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static org.openqa.selenium.By.cssSelector;
 import static org.openqa.selenium.By.xpath;
 
-/**
- * Created by 450G1 on 15.06.2017.
- */
-public abstract class TestBase_StorePage {
+public abstract class BaseStorePage {
     public WebDriver driver;
     public WebDriverWait wait;
 
@@ -154,10 +150,6 @@ public abstract class TestBase_StorePage {
     protected void check_open_store_page() {
         driver = new ChromeDriver();
         wait = new WebDriverWait(driver, 10);
-    }
-    @After
-    public void quitDriver() {
-        driver.quit();
     }
 
     protected void check_sign_in_for_buying() {

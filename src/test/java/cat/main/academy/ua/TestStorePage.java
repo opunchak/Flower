@@ -1,11 +1,9 @@
 package cat.main.academy.ua;
 
+import org.junit.After;
 import org.junit.Test;
 
-public class StorePage extends TestBase_StorePage{
-
-
-
+public class TestStorePage extends BaseStorePage {
 
     @Test
     public void OpenStorePage() throws InterruptedException {
@@ -13,7 +11,6 @@ public class StorePage extends TestBase_StorePage{
         check_go_to_store_page();
         check_find_duck();
         check_wait();
-
 
         // click view full page
         //driver.findElement(xpath(".//*[@id='view-full-page']/a")).click();
@@ -37,7 +34,9 @@ public class StorePage extends TestBase_StorePage{
         checkViewOnlyImage();
         checkCloseJustImage();
         checkCloseRecentlyViewed();
-
     }
-
+    @After
+    public void quitDriver() {
+        driver.quit();
+    }
 }

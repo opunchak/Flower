@@ -1,15 +1,15 @@
 package cat.main.academy.ua;
 
-import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static org.openqa.selenium.By.cssSelector;
 import static org.openqa.selenium.By.xpath;
 
- public abstract class TestBaseLogin {
+ public abstract class BaseLoginPage {
     public WebDriver driver;
     public WebDriverWait wait;
 
@@ -100,11 +100,5 @@ import static org.openqa.selenium.By.xpath;
     protected void check_fill_email() {
         check_fill_email("olyasa@meta.ua");
     }
-
-    @After
-    public void quitDriver() {
-        driver.quit();
-    }
-
 
 }

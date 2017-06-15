@@ -1,7 +1,9 @@
 package cat.main.academy.ua;
+
+import org.junit.After;
 import org.junit.Test;
 
-public class LoginPage extends TestBaseLogin {
+public class TestLoginPage extends BaseLoginPage {
 
     @Test
     public void newUserLogin() {
@@ -15,9 +17,10 @@ public class LoginPage extends TestBaseLogin {
         check_fill_confirmed_password();
         check_confirm_sign_in();
         check_confirm_by_click_Create_button();
-
-
     }
+    @After
+    public void quitDriver() {
+        driver.quit();}
 
 
 }
